@@ -44,7 +44,7 @@ ol {
   display: flex;
   align-items: flex-end;
   inline-size: 1140px;
-  block-size: 534px;
+  min-block-size: 534px;
   gap: 30px;
 }
 
@@ -88,8 +88,7 @@ ol {
   display: flex;
   flex-direction: column;
   block-size: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   gap: 30px;
   inline-size: 100%;
 }
@@ -107,7 +106,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  inline-size: 100%;
+  inline-size: 186px;
 }
 
 .search-form__fieldset {
@@ -115,8 +114,8 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: inherit;
+  font-weight: inherit;
   margin-block-end: 5px;
 }
 
@@ -152,13 +151,13 @@ ol {
   inline-size: 225px;
   block-size: 27px;
   background-color: transparent;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   border-inline-start: none;
   border-inline-end: none;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   appearance: none;
 }
 
@@ -207,7 +206,7 @@ ol {
   outline-offset: 1px;
 }
 
-.content__card-link_current,
+.content__card-link_current, .content__card-link:active,
 .button:active {
   background-color: #545050;
 }
@@ -216,10 +215,15 @@ ol {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-size: 30px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  inline-size: 100%;
 }
 
 .content__video-card-description {
   line-height: 16.2px;
+  inline-size: 100%;
 }
 
 .visually-hidden {
@@ -235,12 +239,12 @@ ol {
 .button {
   cursor: pointer;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 700;
   block-size: 34px;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .button:focus-visible {
