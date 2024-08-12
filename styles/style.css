@@ -44,7 +44,6 @@ ol {
   display: flex;
   align-items: flex-end;
   inline-size: 1140px;
-  min-block-size: 534px;
   gap: 30px;
 }
 
